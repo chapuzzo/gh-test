@@ -11,4 +11,4 @@ runs:
   args:
     - sh
     - -c
-    - 'echo date >> ${GITHUB_OUTPUT}'
+    - 'echo data=`date` >> ${GITHUB_OUTPUT}'
