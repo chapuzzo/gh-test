@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: build
-        uses: chapuzzo/gh-test/.github/actions/build
+        uses: chapuzzo/gh-test@main/.github/actions/build
