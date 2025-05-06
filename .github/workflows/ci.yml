@@ -9,8 +9,8 @@ jobs:
       date: ${{ steps.build.date }}
 
     steps:
-      - name: checkout
+      - id: checkout
         uses: actions/checkout@v4
 
-      - name: build
+      - id: build
         uses: ./.github/actions/build
