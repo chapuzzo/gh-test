@@ -9,5 +9,6 @@ runs:
   using: docker
   image: alpine:latest
   args:
-    - echo
-    - hola
+    - sh
+    - -c
+    - 'echo date >> ${GITHUB_OUTPUT}'
