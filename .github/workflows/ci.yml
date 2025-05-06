@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: build
-        uses: ./actions/build
+        uses: ../actions/build
