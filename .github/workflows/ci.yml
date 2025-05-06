@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      date: ${{ steps.build.date }}
+      date: ${{ steps.build.outputs.date }}
 
     steps:
       - id: checkout
@@ -14,3 +14,6 @@ jobs:
 
       - id: build
         uses: ./.github/actions/build
+
+      - name: results
+        run: echo "${{ needs.build.outputs.date }}"
