@@ -1,0 +1,13 @@
+name: Building things
+description: something important
+
+outputs:
+  date:
+    description: what time is it
+
+runs:
+  using: docker
+  image: alpine:latest
+  args:
+    - echo
+    - hola
