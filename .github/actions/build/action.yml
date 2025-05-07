@@ -7,7 +7,7 @@ outputs:
 
 runs:
   using: docker
-  image: alpine:latest
+  image: Dockerfile
   args:
     - sh
     - -c

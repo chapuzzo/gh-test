@@ -1,6 +1,11 @@
 name: CI
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,8 +20,11 @@ jobs:
         uses: ./.github/actions/build
 
   results:
-    needs: build
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
+      - name: debug
+        run: echo "::notice::${{ needs.build.outputs.date }}"
+
       - name: results
         run: echo "${{ needs.build.outputs.date }}"
