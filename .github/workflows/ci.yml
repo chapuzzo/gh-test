@@ -28,3 +28,13 @@ jobs:
 
       - name: results
         run: echo "${{ needs.build.outputs.date }}"
+
+  from_dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./build-image.sh
+        working-directory: ./src
+
+      - run: ./run.sh
+        working-directory: ./src
+        
