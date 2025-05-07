@@ -32,9 +32,11 @@ jobs:
   from_dockerfile:
     runs-on: ubuntu-latest
     steps:
+      - id: checkout
+        uses: actions/checkout@v4
+    
       - run: ./build-image.sh
         working-directory: ./src
 
       - run: ./run.sh
         working-directory: ./src
-        
